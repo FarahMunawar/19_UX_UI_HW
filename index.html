@@ -2,10 +2,10 @@
  <html lang="en">
  <head>
  <title>Background Image Example</title>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
  
  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +20,61 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
  
 </head>
-<body>
+<body class="vh-100 ">
+     
+    <!-------------Bootstrap nav bar------------>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+          <a class="navbar-brand fs-4" href="#"></a>
+          <!-------------toggle btn------------>
+          <button
+           class="navbar-toggler shadow-none border-0" 
+           type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-------------sidebar------------>
+
+          <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+            <div class="offcanvas-header">
+              
+              <button
+               type="button" 
+               class="btn-close btn-close-black" 
+               data-bs-dismiss="offcanvas" 
+               aria-label="Close"></button>
+            </div>
+             <!-------------sidebar body----------->
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="#work">Work</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#about">About Me</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="#contact">Contact Me</a>
+                  </li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </nav>  
+
+         
+
+
+
+
+
+
   <style>
     body {
       background-image: url("images/background.png");
@@ -34,20 +85,11 @@
   </style>
     <div id="header">
         <div class="container">
+            
             <nav>
                 <img src="../images/fm_logo.png" class="logo">
                 
-                <ul id="sidemenu">
-                    <li><a href="#">Work </a></li>
-                    <li><a href="#">About Me </a></li>
-                    <li><a href="#">Gallery </a></li>
-                    <li><a href="#">Contact </a></li>
-                    <i class="fas fa-times-circle" style="color: #ffffff;" onclick="closemenu()"></i>
-                    
-
-                </ul>
-                <i class="fas fa-bars" style="color: #ffffff;" onclick="openmenu()"></i>
-
+                
             </nav>
             <div class="header-text">
                 <p> Farah Munawar</p>
@@ -57,8 +99,10 @@
             <div id="signature">
                 <img src="images/signature.gif" alt="Signature" class="signature-img">
               </div>
-              
-        
+
+
+
+
           
         
           
@@ -71,6 +115,8 @@
                 <div class="work">
                     <img src="images/mockup1-greyhound.jpg">
                     <div class="layer">
+            
+            
                         <h3>Greyhound Trust Website Redesign</h3>
                         <p>Non-profit organisation, is in dire need of a redesign to bring it up to par with other local websites within the same trust.</p>
                         
@@ -125,14 +171,14 @@
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>Collaboration & Communication:</span><br>Effectively  collaborating between  teams, stakeholders, and clients, to communicate design decisions and recommendations is been my strong suit as a designer.</li>
-                            <li><span>User Research:</span><br>My qualitative and quantitative  research helps gain insights into user behaviors, needs, and preferences.</li>
-                            <li><span>Empathy:</span><br>My design objective is to create communication through senses and emotions, empathising with users and being in their shoes and thinking with them are the roots of my design process.</li>
+                            <li><span>Collaboration & Communication:</span><br>Effectively collaborating between teams, stakeholders, and clients, to communicate design decisions and recommendations is been my strong suit as a designer.</li>
+                            <li><span>User Research:</span><br>My qualitative and quantitative research helps gain insights into user behaviors, needs, and preferences.</li>
+                            <li><span>Empathy:</span><br>My design objective is to create communication through senses and emotions, empathising with users and being in their shoes and thinking with them.</li>
                             <li><span>Analytical Thinking:</span><br>Analysing data, metrics, and user feedback to inform design decisions and improvements considering user needs and goals are core of my design process.</li>
                             <li><span>Information Architecture:</span><br>Designing or Redesigning, structuring information in a coherent manner for easy user understanding and navigation prioritising user pain points.</li>
-                            <li><span>Problem Solving:</span><br>Problem solving helps understand, define then create in my design process by exploring multiple prespective, brainstrom ideas and consider various design alternatives to find the most effective solution ehich then analyse and evaluate critically.</li>
+                            <li><span>Problem Solving:</span><br>Problem solving helps understand, define then create, in my design process by exploring multiple prespective, brainstrom ideas and consider various design alternatives to find the most effective solution which then analyse and evaluate critically.</li>
                             <li><span>Visual Design:</span><br>Aesthetic sensibility and proficiency in creating visually appealing and cohesive designs that align with user expectations.</li>
-                            <li><span>Interaction Design:</span><br>Interaction design skills works as a bridge  between users and digital interfaces.</li>
+                            <li><span>Interaction Design:</span><br>Interaction design skills works as a bridge  between users and digital interface.</li>
                             <li><span>Prototyping:</span><br>Prototypes helps me test and iterate on design concepts and gather feedback from users to validate my findings.</li>
                             <li><span>Testing:</span><br>Guerilla testing, Usability Testing, A/B Testing and Accessibility Testing helps validate my design decisions on different stages of design process.</li>
                         </ul>
@@ -202,17 +248,7 @@
 
 
 </script>
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu(){
-        sidemenu.style.right = "0";
 
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-
-    }
-</script>
 <style>
     /* Hide hamburger menu and times icon in screens >=600 */
 

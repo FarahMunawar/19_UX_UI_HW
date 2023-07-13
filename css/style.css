@@ -9,6 +9,7 @@ body {
   background-image: url("images/background.png");
 }
 
+
 #header {
   width: 100%;
   height: 100vh;
@@ -20,79 +21,34 @@ body {
 .container {
   padding: 10px 10%;
 }
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-nav p {
-  font-size: 28px;
-  font-family: 'Nunito Sans', sans-serif;
-  
-  color: white;
-
-}
-
 .logo {
   width: 50px;
   height: 40px;
+  margin-top: -130px;
 }
 
 .header-text p {
   display: flex;
   justify-self: flex-start;
-  margin-top: -55px;
+  margin-top: -100px;
   margin-left: 60px;
-
-
-
- 
-
-
-  
   font-size: 28px;
   font-family: 'Nunito Sans', sans-serif;
   color: white
 }
-
-nav ul li {
-  display: inline-block;
-  list-style-type: none;
-  margin: 20px 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 22px;
+.offcanvas-body .nav-link {
+  font-size: 23px;
   font-family: 'Nunito Sans', sans-serif;
-  position: relative;
-}
-
-nav ul li a::after {
-  content: '';
-  width: 0%;
-  height: 2px;
-  background: #DF7830;
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  transition: 0.5s;
-}
-
-nav ul li a:hover::after {
-  width: 100%;
+  color: white;
 }
 
 .header-text h1 {
   display: flex;
   justify-self: flex-start;
-  margin-top: 15%;
+  margin-top:15%;
   font-size: 68px;
   font-family: "Nunito Sans ExtraBold", sans-serif;
+  font-weight: 800;
   color: white;
   width: auto;
 
@@ -119,20 +75,20 @@ h1 {
 /*-----------work--------*/
 
 #work {
-  padding: 60px 0;
-
-
+  padding: 80px 0;
+}
+.sub-title {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 55px;
+  font-weight: 600;
+  color: #ffffff;
+  align-items: center;
+  margin-left: 500px;
 }
 
-h2 {
-  display: flex;
-  justify-content: center;
-  margin-top: 130px;
-  font-size: 70px;
-  font-family: "Nunito Sans Bold", sans-serif;
-  color: white;
 
-}
+
+
 
 
 
@@ -236,7 +192,7 @@ h2 {
   font-size: 25px;
   font-family: "Nunito Sans", sans-serif;
   width: 100%;
-  margin-left: 90px;
+  margin-left: 10px;
 }
 
 .strong {
@@ -246,10 +202,12 @@ h2 {
 }
 
 .subtitle {
-  font-size: 60px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 55px;
   font-weight: 600;
   color: #ffffff;
-  margin-left: -300px;
+  align-items: center;
+  
 }
 
 .tab-titles {
@@ -303,20 +261,14 @@ h2 {
 
 /*-----------contact--------*/
 .contact-left {
-  flex-basis: 35%;
+  flex-basis: 45%;
   text-align: justify;
 }
 
 .contact-right {
-  flex-basis: 60%;
+  flex-basis: 50%;
 }
 
-.contact-left h2 {
-  margin-top: auto;
-  margin-left: -250px;
-
-
-}
 
 .contact-left p {
   margin-top: 20px;
@@ -331,15 +283,16 @@ h2 {
 
 }
 
+
 .social-icons {
   margin-top: 30px;
 }
 
 .social-icons a {
-  width: 3px large;
+  width: 6px large;
   text-decoration: none;
   font-size: 40px;
-  margin-right: 15px;
+  margin-right: 19px;
   color: white;
   display: inline-block;
   transition: transform 0.5s;
@@ -403,14 +356,16 @@ form .btn2 {
   font-size: 16px;
 }
 
+
 /*-----------css for small screen--------*/
-nav .fas{
-  display: none;
-}
 
 
-@media only screen and (max-width: 600px) {
 
+@media (max-width: 991px) {
+  .sidebar {
+    background-color:rgba(223, 120, 48, 1)!important;
+ 
+  }
   .logo {
     width: 40px;
     height: 30px;
@@ -419,49 +374,22 @@ nav .fas{
   .header-text h1 {
     font-size: 34px;
   }
-
-  nav .fas{
-    display: block;
-    font-size: 25px;
-    color: #ffffff;
-  }
-
-  nav ul {
-    background: #DF7830;
-    position: fixed;
-    top: 0;
-    right: -200px;
-    width: 200px;
-    height: 100vh;
-    padding-top: 50px;
-    z-index: 2;
-    transition: right 0.5s;
-
-  }
-
-  nav ul li {
-    display: block;
-    margin: 20px;
-
-  }
-
-  nav ul .fas {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
-  }
   .header-text p{
-    margin-top: -35px;
+    font-size: 25px;
+    margin-top: -95px;
+    margin-left: 50px;
   }
 
   .signature-img {
     width: 250px;
     position: relative;
-    top: 210px;
+    top: 205px;
     right: -50px;
 
 
+  }
+  .sub-title {
+    margin-left: 0;
   }
 
 
@@ -478,18 +406,22 @@ nav .fas{
     font-size: 16px;
   }
 
-  .sidemenu .fas {
-    color: #ffffff;
-  }
+
 
   #work h2 {
     font-size: 30px;
     margin-top: 200px;
   }
 
+
   .about-col-1,
   .about-col-2 {
     flex-basis: 100%;
+  }
+  .about-col-1 img{
+    width:60%;
+    margin-left: 80px;
+    
   }
 
   .about-col-1 {
@@ -528,11 +460,7 @@ nav .fas{
   .copyright {
     font-size: 14px;
   }
-  @media only screen and (min-width: 600px) {
-    nav .fas {
-      display: none;
-    }
-  }
+ 
 
 
 
